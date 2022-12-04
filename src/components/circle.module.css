@@ -1,0 +1,71 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.whole{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.progress{
+    height: 200px;
+    width: 200px;
+}
+
+.btn{
+    margin-top:50px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.btn button{
+    background-color: rgb(250, 243, 243);
+    display: flex;
+    border-radius: 30px;
+    border: none;
+    padding: 8px 27px ;
+    box-shadow: 1px 5px rgba(202,202,202,255);
+    color:rgba(108,62,119,255);
+    cursor: pointer;
+    
+    
+}
+
+.btn button svg{
+    height: 20px;
+    width: 10px;
+}
+
+.steps{
+    background-color:rgba(240,236,241,255) ;
+    height: 200px;
+    width: 350px;
+    
+    border-radius: 20px;
+    display: flex;
+    margin: 30px;
+    
+}
+
+.steps  b{
+    position: absolute;
+    margin: 10px;
+    
+}
+
+.steps img{
+    margin: 30px 0px;
+}
+
+.steps h2 {
+    margin-top: 80px;
+}
+
+
+
+
