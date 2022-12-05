@@ -89,12 +89,16 @@ export default function Circle() {
       </div>
 
       <div className={styles.steps}>
+
+      <div className={styles.step}>
         
           <b>Steps 2/3</b> 
         
         <img src={image} alt=""/>
         <h2>Cleansing</h2>
       </div>
+      </div>
+
     </>
   );
 }
