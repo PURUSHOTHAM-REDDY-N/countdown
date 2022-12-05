@@ -2,9 +2,7 @@ import React from "react";
 import styles from "./circle.module.css";
 
 import { useState, useEffect } from "react";
-
 import image from "./image2.png"
-
 
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
@@ -12,14 +10,16 @@ import "react-circular-progressbar/dist/styles.css";
 export default function Circle() {
   const [min, setMin] = useState(0);
   const [sec, setSec] = useState(35);
-  const [amount, setAmount] = useState(1.5);
   const [progress, setProgress] = useState(0);
   const [start, setStart] = useState(true);
 
+  const amount = 1.5;
 
   useEffect(() => {
-      let x = sec,
-        y = min;
+    let x = sec,
+      y = min;
+
+    setProgress((y + x / 60) / amount);
 
     const interval = setInterval(() => {
       if ((x === 0 && y === 0) || start === false) {
@@ -40,10 +40,9 @@ export default function Circle() {
     }, 1000);
 
     return () => {
-        
       clearInterval(interval);
     };
-  }, [sec, start, progress]);
+  }, [min, sec, start, progress]);
 
   const increase = () => {
     if (start === false) {
@@ -93,7 +92,7 @@ export default function Circle() {
         
           <b>Steps 2/3</b> 
         
-        <img src={image}/>
+        <img src={image} alt=""/>
         <h2>Cleansing</h2>
       </div>
     </>
